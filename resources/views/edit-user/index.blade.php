@@ -27,7 +27,6 @@
                             <p x-text="errorMessage"></p>
                         </div>
 
-                        <!-- Form submission through Alpine.js -->
                         <form @submit.prevent="submitForm" class="mt-6 space-y-6" enctype="multipart/form-data">
                             @csrf
 

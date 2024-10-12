@@ -97,7 +97,7 @@
 
                         if (response.status === 200) {
                             alert('User restored successfully.');
-                            location.reload(); // Refresh the page after successful restore
+                            location.reload();
                         } else {
                             throw new Error('Failed to restore the user.');
                         }
@@ -109,8 +109,6 @@
                 async confirmDelete(userId) {
                     if (confirm('Are you sure you want to permanently delete this user?')) {
                         try {
-                            // Use Axios to send a DELETE request for permanently deleting the user
-
                             const url =
                                 `{{ route('users.users.force-delete', ['user' => '__ID__']) }}`
                                 .replace(
@@ -124,7 +122,7 @@
 
                             if (response.status === 200) {
                                 alert('User permanently deleted.');
-                                location.reload(); // Refresh the page after successful delete
+                                location.reload();
                             } else {
                                 throw new Error('Failed to delete the user.');
                             }

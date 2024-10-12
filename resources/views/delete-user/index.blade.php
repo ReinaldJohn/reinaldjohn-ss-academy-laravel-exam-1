@@ -17,7 +17,6 @@
                             </h2>
                         </header>
 
-                        <!-- Success and Error Messages -->
                         <div x-show="successMessage" x-transition x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)"
                             class="text-sm text-green-600 dark:text-green-400" x-cloak>
                             <p x-text="successMessage"></p>
@@ -28,7 +27,6 @@
                             <p x-text="errorMessage"></p>
                         </div>
 
-                        <!-- Form submission through Alpine.js -->
                         <form @submit.prevent="submitForm" class="mt-6 space-y-6">
                             @csrf
 

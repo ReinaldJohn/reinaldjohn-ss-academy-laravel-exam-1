@@ -32,7 +32,7 @@ class UserFactory extends Factory
             'suffixname' => $this->faker->optional()->suffix(),
             'username' => $this->faker->unique()->userName(),
             'email' => $this->faker->unique()->safeEmail(),
-            'password' => Hash::make('password'), // You can use a default password
+            'password' => Hash::make('password'),
             'photo' => 'https://i.pravatar.cc/150?img=' . rand(1, 70),
             'type' => $this->faker->randomElement(['user', 'admin']),
             'remember_token' => Str::random(10),
